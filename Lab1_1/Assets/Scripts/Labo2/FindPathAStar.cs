@@ -76,7 +76,7 @@ public class FindPathAStar : MonoBehaviour {
                 }
             }
         }
-        locations.Shuffle();
+        //locations.Shuffle();
 
         Vector3 startLocation = new Vector3(1, 0.5f, 1);
         startNode = new PathMarker(new MapLocation(1, 1),
