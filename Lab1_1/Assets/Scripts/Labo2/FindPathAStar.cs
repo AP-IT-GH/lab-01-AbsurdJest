@@ -122,7 +122,7 @@ public class FindPathAStar : MonoBehaviour {
                 open.Add(new PathMarker(neighbour, g, h, f, pathBlock, thisNode));
             }
         }
-        open = open.OrderBy(p => p.F).ToList<PathMarker>();
+        open = open.OrderBy(p => p.F).ThenByDescending(p => p.H).ToList<PathMarker>();
         PathMarker pm = (PathMarker)open.ElementAt(0);
         closed.Add(pm);
 
@@ -168,10 +168,27 @@ public class FindPathAStar : MonoBehaviour {
             BeginSearch();
             hasStarted = true;          
         }
-        
+
 
         if (hasStarted)
-            if (Input.GetKeyDown(KeyCode.C)) Search(lastPos);
+        {
+            if (!searchingHasFinished)
+                StartCoroutine(Searching());
+            else
+            {
+                if (!PathHasConstructed)
+                {
+                    ReconstructPath();
+                }
+                else
+                {
+                    StartCoroutine(FollowingPath());
+                }
+            }
+                
+        }
+
+            //if (Input.GetKeyDown(KeyCode.C)) Search(lastPos);
     }
 
     // The coroutine function
@@ -186,13 +203,30 @@ public class FindPathAStar : MonoBehaviour {
             Debug.Log("Coroutine is running...");
             Search(lastPos);
             // Wait for the next frame
-//            yield return true;
+            yield return new WaitForEndOfFrame();
         }
 
         searchingHasFinished = true;
         yield return null;
 
         Debug.Log("Coroutine finished!");
+    }
+
+    bool atEndOfPath = false;
+    IEnumerator FollowingPath()
+    {
+        int i = 0;
+        while(!atEndOfPath)
+        {
+            startNode.marker.transform.position = new Vector3(path[i].marker.transform.position.x, startNode.marker.transform.position.y, path[i].marker.transform.position.z);
+            if (i == path.Count - 1)
+            {
+                atEndOfPath = true;
+            }
+            i++;
+            yield return new WaitForSeconds(1);
+        }
+        yield return null;
     }
 
     bool PathHasConstructed = false;
@@ -209,8 +243,6 @@ public class FindPathAStar : MonoBehaviour {
         }
         path.Insert(0,startNode);
         PathHasConstructed = true;
-
-
     }
    
 }
