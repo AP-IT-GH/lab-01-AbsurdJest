@@ -172,15 +172,15 @@ public class FindPathAStar : MonoBehaviour {
 
         if (hasStarted)
         {
-            if (!searchingHasFinished)
+            if (!searchingHasStarted)
                 StartCoroutine(Searching());
             else
             {
-                if (!PathHasConstructed)
+                if (searchingHasFinished && !PathHasConstructed)
                 {
                     ReconstructPath();
                 }
-                else
+                else if(searchingHasFinished && !following)
                 {
                     StartCoroutine(FollowingPath());
                 }
@@ -193,17 +193,19 @@ public class FindPathAStar : MonoBehaviour {
 
     // The coroutine function
     bool searchingHasFinished = false;
+    bool searchingHasStarted = false;
+    bool following = false;
     IEnumerator Searching()
     {
         Debug.Log("searching started!");
-
+        searchingHasStarted = true;
         while (!done)
         {
             // Perform some task
             Debug.Log("Coroutine is running...");
             Search(lastPos);
             // Wait for the next frame
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0.5f);
         }
 
         searchingHasFinished = true;
@@ -215,6 +217,7 @@ public class FindPathAStar : MonoBehaviour {
     bool atEndOfPath = false;
     IEnumerator FollowingPath()
     {
+        following = true;
         int i = 0;
         while(!atEndOfPath)
         {
@@ -224,7 +227,7 @@ public class FindPathAStar : MonoBehaviour {
                 atEndOfPath = true;
             }
             i++;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
         yield return null;
     }
