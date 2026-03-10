@@ -76,7 +76,7 @@ public class MoveTank : MonoBehaviour
         }
     }
 
-    public void changeTarget()
+    public void ChangeTarget()
     {
         nextWaypoint = 0;
         chosenWaypoint = wpSelector.value;
