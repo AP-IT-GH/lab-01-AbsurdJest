@@ -1,0 +1,65 @@
+{
+    "ZoekAgent": {
+        "checkpoints": [
+            {
+                "steps": 57488,
+                "file_path": "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-57488.onnx",
+                "reward": null,
+                "creation_time": 1771950052.1108844,
+                "auxillary_file_paths": [
+                    "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-57488.pt"
+                ]
+            },
+            {
+                "steps": 63833,
+                "file_path": "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-63833.onnx",
+                "reward": -378.3899803161621,
+                "creation_time": 1771950163.9391181,
+                "auxillary_file_paths": [
+                    "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-63833.pt"
+                ]
+            },
+            {
+                "steps": 74035,
+                "file_path": "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-74035.onnx",
+                "reward": null,
+                "creation_time": 1771950436.899761,
+                "auxillary_file_paths": [
+                    "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-74035.pt"
+                ]
+            },
+            {
+                "steps": 76097,
+                "file_path": "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-76097.onnx",
+                "reward": 3.648144523302714,
+                "creation_time": 1771950645.8060596,
+                "auxillary_file_paths": [
+                    "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-76097.pt"
+                ]
+            },
+            {
+                "steps": 100006,
+                "file_path": "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-100006.onnx",
+                "reward": 2.9248999754587808,
+                "creation_time": 1771950970.660925,
+                "auxillary_file_paths": [
+                    "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-100006.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 100006,
+            "file_path": "results\\CubeAgentRays\\ZoekAgent.onnx",
+            "reward": 2.9248999754587808,
+            "creation_time": 1771950970.660925,
+            "auxillary_file_paths": [
+                "results\\CubeAgentRays\\ZoekAgent\\ZoekAgent-100006.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cpu"
+    }
+}

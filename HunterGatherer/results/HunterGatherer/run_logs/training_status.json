@@ -1,0 +1,87 @@
+{
+    "Hunter": {
+        "checkpoints": [
+            {
+                "steps": 499947,
+                "file_path": "results\\HunterGatherer\\Hunter\\Hunter-499947.onnx",
+                "reward": 4.900197431445122,
+                "creation_time": 1776536097.6441307,
+                "auxillary_file_paths": [
+                    "results\\HunterGatherer\\Hunter\\Hunter-499947.pt"
+                ]
+            },
+            {
+                "steps": 621063,
+                "file_path": "results\\HunterGatherer\\Hunter\\Hunter-621063.onnx",
+                "reward": null,
+                "creation_time": 1776538712.3361087,
+                "auxillary_file_paths": [
+                    "results\\HunterGatherer\\Hunter\\Hunter-621063.pt"
+                ]
+            },
+            {
+                "steps": 632659,
+                "file_path": "results\\HunterGatherer\\Hunter\\Hunter-632659.onnx",
+                "reward": null,
+                "creation_time": 1776538951.9239035,
+                "auxillary_file_paths": [
+                    "results\\HunterGatherer\\Hunter\\Hunter-632659.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 632659,
+            "file_path": "results\\HunterGatherer\\Hunter.onnx",
+            "reward": null,
+            "creation_time": 1776538951.9239035,
+            "auxillary_file_paths": [
+                "results\\HunterGatherer\\Hunter\\Hunter-632659.pt"
+            ]
+        }
+    },
+    "Gatherer": {
+        "checkpoints": [
+            {
+                "steps": 499947,
+                "file_path": "results\\HunterGatherer\\Gatherer\\Gatherer-499947.onnx",
+                "reward": -3.850394308567047,
+                "creation_time": 1776536098.3149748,
+                "auxillary_file_paths": [
+                    "results\\HunterGatherer\\Gatherer\\Gatherer-499947.pt"
+                ]
+            },
+            {
+                "steps": 621063,
+                "file_path": "results\\HunterGatherer\\Gatherer\\Gatherer-621063.onnx",
+                "reward": null,
+                "creation_time": 1776538712.487348,
+                "auxillary_file_paths": [
+                    "results\\HunterGatherer\\Gatherer\\Gatherer-621063.pt"
+                ]
+            },
+            {
+                "steps": 632659,
+                "file_path": "results\\HunterGatherer\\Gatherer\\Gatherer-632659.onnx",
+                "reward": null,
+                "creation_time": 1776538952.0462923,
+                "auxillary_file_paths": [
+                    "results\\HunterGatherer\\Gatherer\\Gatherer-632659.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 632659,
+            "file_path": "results\\HunterGatherer\\Gatherer.onnx",
+            "reward": null,
+            "creation_time": 1776538952.0462923,
+            "auxillary_file_paths": [
+                "results\\HunterGatherer\\Gatherer\\Gatherer-632659.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cpu"
+    }
+}

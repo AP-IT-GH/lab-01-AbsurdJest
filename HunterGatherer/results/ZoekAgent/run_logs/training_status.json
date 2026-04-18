@@ -1,0 +1,29 @@
+{
+    "ZoekAgent": {
+        "checkpoints": [
+            {
+                "steps": 84023,
+                "file_path": "results\\ZoekAgent\\ZoekAgent\\ZoekAgent-84023.onnx",
+                "reward": 0.9090909090909091,
+                "creation_time": 1771945544.9534247,
+                "auxillary_file_paths": [
+                    "results\\ZoekAgent\\ZoekAgent\\ZoekAgent-84023.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 84023,
+            "file_path": "results\\ZoekAgent\\ZoekAgent.onnx",
+            "reward": 0.9090909090909091,
+            "creation_time": 1771945544.9534247,
+            "auxillary_file_paths": [
+                "results\\ZoekAgent\\ZoekAgent\\ZoekAgent-84023.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cpu"
+    }
+}
